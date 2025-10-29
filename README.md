@@ -34,6 +34,8 @@
 
 [**Data Analysis Basics - Exercises notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%201%20-%20Data%20Wrangling%20%26%20Analysis/Data%20Analysis%20Basics/Exercises%20Notebook.ipynb)
 
+[**Data Analysis Basics - Exercises Solutions** ⭐   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%201%20-%20Data%20Wrangling%20%26%20Analysis/Data%20Analysis%20Basics/Exercises%20Notebook%20Solutions.ipynb)
+
 ### Data Analysis Advanced
 
 [**Data Analysis Advanced - Learning notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%201%20-%20Data%20Wrangling%20%26%20Analysis/Data%20Analysis%20Advanced/Learning%20Notebook.ipynb)

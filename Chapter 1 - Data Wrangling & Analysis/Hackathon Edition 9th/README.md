@@ -205,19 +205,19 @@ Your work will be assessed on:
 
 *Remember: The best data analysts don't just answer questions—they ask better ones.*
 
-## The Dataset
+# The Dataset
 
 A comprehensive dataset of songs from various artists worldwide, containing Spotify statistics and YouTube metrics for each track.
 
-### Overview
+## Overview
 
 This dataset combines music streaming data from Spotify with YouTube video performance metrics. Data was collected on **February 7th, 2023**.
 
-### Dataset Contents
+## Dataset Contents
 
 The dataset includes **26 variables** for each song:
 
-#### Basic Information
+### Basic Information
 
 - **Track**: Name of the song as it appears on Spotify
 - **Artist**: Name of the artist
@@ -226,7 +226,7 @@ The dataset includes **26 variables** for each song:
 - **Album_type**: Indicates if the song is released as a single or part of an album
 - **Uri**: Spotify link used to find the song through the API
 
-#### Audio Features
+### Audio Features
 
 - **Danceability**: Suitability for dancing based on tempo, rhythm stability, beat strength, and regularity
   - Scale: 0.0 (least danceable) to 1.0 (most danceable)
@@ -272,11 +272,11 @@ The dataset includes **26 variables** for each song:
 
 - **Duration_ms**: Duration of the track in milliseconds
 
-### Spotify Metrics
+## Spotify Metrics
 
 - **Stream**: Number of streams on Spotify
 
-### YouTube Metrics
+## YouTube Metrics
 
 - **Url_youtube**: URL of the video linked to the song on YouTube (if available)
 - **Title**: Title of the video clip on YouTube
@@ -288,6 +288,6 @@ The dataset includes **26 variables** for each song:
 - **Licensed**: Indicates whether the video represents licensed content uploaded to a channel linked to a YouTube content partner
 - **official_video**: Boolean value indicating if the video found is the official music video
 
-### Important Notes
+## Important Notes
 
 ⚠️ **Time-Dependent Data**: These statistics are heavily dependent on the collection date (**February 7th, 2023**). All metrics reflect values as of this date and will differ from current statistics.

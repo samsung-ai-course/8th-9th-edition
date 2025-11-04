@@ -1,5 +1,7 @@
 # Music Dataset Analysis Hackathon
 
+[**Hackathon Notebook notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%201%20-%20Data%20Wrangling%20%26%20Analysis/Hackathon%20Edition%209th/notebook.ipynb)
+
 ## Overview
 
 Welcome to the Music Dataset Analysis Hackathon! This challenge will test your data analysis skills using real-world music streaming and social media data. Your goal is to extract meaningful insights that could inform business decisions in the music industry.

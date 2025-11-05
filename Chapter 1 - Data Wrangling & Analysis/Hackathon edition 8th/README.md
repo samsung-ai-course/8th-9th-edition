@@ -1,5 +1,7 @@
 # Healthcare Length of Stay (LOS) Analysis Challenge
 
+[**Hackathon Notebook notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%201%20-%20Data%20Wrangling%20%26%20Analysis/Hackathon%20edition%208th/notebook.ipynb)
+
 ## Guide & Tips on how you can organize your workgroup to solve this challenge
 
 [Guide](https://github.com/samsung-ai-course/8th-9th-edition/blob/main/Chapter%201%20-%20Data%20Wrangling%20&%20Analysis/Hackathon%20Edition%209th/team-guidelines.md)

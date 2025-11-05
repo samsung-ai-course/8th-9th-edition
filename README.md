@@ -57,6 +57,10 @@
 
 [**Multi Index - Exercise notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%201%20-%20Data%20Wrangling%20%26%20Analysis/Timeseries%20%26%20DoubleIndex/Double%20Index/Exercise%20notebook.ipynb)
 
+### Hackathon Edition 8
+
+[Hackathon Page](https://github.com/samsung-ai-course/8th-9th-edition/tree/main/Chapter%201%20-%20Data%20Wrangling%20%26%20Analysis/Hackathon%20edition%208th)
+
 ### Hackathon Edition 9
 
 [Hackathon Page](https://github.com/samsung-ai-course/8th-9th-edition/tree/main/Chapter%201%20-%20Data%20Wrangling%20%26%20Analysis/Hackathon%20Edition%209th)

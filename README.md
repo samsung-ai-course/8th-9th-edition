@@ -67,7 +67,7 @@
 
 ## Chapter 2: Natural Language Processing
 
-### Class 1 & 2: Text Search & Clustering
+### Class 1 & 2: NLP and Search
 
 [**Learning Notebook Part 1**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%202%20-%20Natural%20Language%20Processing/Class%201%20%26%202%20-%20NLP%20and%20Search/notebooks/Learning%20Notebook%20Part%201.ipynb)
 

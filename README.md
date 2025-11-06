@@ -64,3 +64,15 @@
 ### Hackathon Edition 9
 
 [Hackathon Page](https://github.com/samsung-ai-course/8th-9th-edition/tree/main/Chapter%201%20-%20Data%20Wrangling%20%26%20Analysis/Hackathon%20Edition%209th)
+
+## Chapter 2: Natural Language Processing
+
+### Class 1 & 2: Text Search & Clustering
+
+[**Learning Notebook Part 1**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%202%20-%20Natural%20Language%20Processing/Class%201%20%26%202%20-%20NLP%20and%20Search/notebooks/Learning%20Notebook%20Part%201.ipynb)
+
+[**Learning Notebook Part 2**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%202%20-%20Natural%20Language%20Processing/Class%201%20%26%202%20-%20NLP%20and%20Search/notebooks/Learning%20Notebook%20Part%202.ipynb)
+
+[**Exercise Notebook Part 1 (Class 1 & 2)**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%202%20-%20Natural%20Language%20Processing/Class%201%20%26%202%20-%20NLP%20and%20Search/notebooks/Exercise%20Notebook%20Part%201.ipynb)
+
+[**Exercise Notebook Part 2 (Class 1 & 2)**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%202%20-%20Natural%20Language%20Processing/Class%201%20%26%202%20-%20NLP%20and%20Search/notebooks/Exercise%20Notebook%20Part%202.ipynb)

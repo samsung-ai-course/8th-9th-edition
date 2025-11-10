@@ -24,7 +24,8 @@ Class 1 & 2 - NLP and Search/
 │   ├── Learning Notebook Part 3.ipynb     ← Consolidation: Industry Tools (NLTK, spaCy, Hugging Face)
 │   ├── Exercise Notebook Part 1.ipynb     ← Class 1 & 2 exercises (follows Learning Part 1)
 │   ├── Exercise Notebook Part 2.ipynb     ← Class 1 & 2 exercises (follows Learning Part 2)
-│   └── Exercise Notebook Part 3.ipynb     ← Consolidation exercises (follows Learning Part 3)
+│   ├── Exercise Notebook Part 3.ipynb     ← Consolidation exercises (follows Learning Part 3)
+│   └── RAG Exercise Notebook.ipynb        ← Bonus: RAG system (builds on Parts 2 & 3)
 ├── data/
 │   └── movies.csv
 └── theory/
@@ -45,12 +46,15 @@ Class 1 & 2 - NLP and Search/
 4. **Exercise Notebook Part 2 (Class 1 & 2)** - Practice exercises for Part 2 (TF-IDF, similarity search, RAG)
 5. **Learning Notebook Part 3** - Industry Tools: NLTK, spaCy, Hugging Face (consolidation)
 6. **Exercise Notebook Part 3** - Practice exercises for Part 3 (NLTK, spaCy, scikit-learn, complete search system)
-7. **Student Guide** - Study reference (concepts, formulas, detailed explanations)
-8. **FAQ** - Common questions and solutions
+7. **RAG Exercise Notebook** (Bonus/Take-Home) - Optional: RAG system combining search with LLM generation
+8. **Student Guide** - Study reference (concepts, formulas, detailed explanations)
+9. **FAQ** - Common questions and solutions
 
 **Important**: Exercise notebooks are split into Part 1, Part 2, and Part 3 to align with the learning notebooks. Complete Part 1 exercises before moving to Part 2, and Part 2 before Part 3!
 
 **Note for Exercise Notebook Part 3**: Exercise 12 requires knowledge of Python classes. A quick reference guide is included in the notebook before Exercise 12, with links to learning resources.
+
+**Note for RAG Exercise Notebook**: This is a **bonus/take-home exercise**. The core learning is in Parts 1, 2, and 3. RAG demonstrates how search (retrieval) is the foundation - it's fundamentally a search problem! The LLM just formats the retrieved results.
 
 ### For Instructors
 1. **Learning Notebook Part 1 & Part 2** - Main teaching material (split for 45min-1hr sessions)
@@ -72,6 +76,7 @@ Click the badges below to open notebooks directly in Google Colab:
 - [**Exercise Notebook Part 2** ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%202%20-%20Natural%20Language%20Processing/Class%201%20%26%202%20-%20NLP%20and%20Search/notebooks/Exercise%20Notebook%20Part%202.ipynb)
 - [**Learning Notebook Part 3** ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%202%20-%20Natural%20Language%20Processing/Class%201%20%26%202%20-%20NLP%20and%20Search/notebooks/Learning%20Notebook%20Part%203.ipynb)
 - [**Exercise Notebook Part 3** ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%202%20-%20Natural%20Language%20Processing/Class%201%20%26%202%20-%20NLP%20and%20Search/notebooks/Exercise%20Notebook%20Part%203.ipynb)
+- [**RAG Exercise Notebook** (Bonus/Take-Home) ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%202%20-%20Natural%20Language%20Processing/Class%201%20%26%202%20-%20NLP%20and%20Search/notebooks/RAG%20Exercise%20Notebook.ipynb)
 
 **Option 2: Upload to Google Colab (if you have local files)**
 1. Go to [Google Colab](https://colab.research.google.com/)
@@ -110,7 +115,7 @@ When using Google Colab (especially from GitHub), you need to upload the data fi
 3. Open **Learning Notebook Part 2** during second part of class (45min-1hr)
    - Covers: TF-IDF, similarity search, document clustering
 4. Complete exercises in **Exercise Notebook Part 2 (Class 1 & 2)** after Learning Part 2
-   - Exercises: TF-IDF from scratch, similarity-based search, RAG system
+   - Exercises: TF-IDF from scratch, similarity-based search, hybrid search
 
 **Part 3 (Consolidation - Additional time):**
 5. Open **Learning Notebook Part 3** to consolidate learning with industry tools
@@ -118,6 +123,13 @@ When using Google Colab (especially from GitHub), you need to upload the data fi
 6. Complete exercises in **Exercise Notebook Part 3** after Learning Part 3
    - Exercises: NLTK preprocessing, spaCy preprocessing, TF-IDF with custom tokenizers, complete search system with classes
    - **Note**: Exercise 12 requires Python classes knowledge - a quick reference is included in the notebook
+
+**Bonus/Take-Home (Optional):**
+7. **RAG Exercise Notebook** - Optional advanced exercise
+   - Combines search (retrieval) with LLM generation
+   - Demonstrates how search is the foundation of RAG
+   - **Key insight**: RAG is fundamentally a search problem - retrieval is the most important part!
+   - Bonus: Using LLM as a judge to improve/rewrite results
 
 **Note**: Document clustering is covered in **Learning Notebook Part 2** but not in exercise notebooks (concepts are sufficient).
 
@@ -145,8 +157,8 @@ When using Google Colab (especially from GitHub), you need to upload the data fi
 **Part 2:**
 - TF-IDF (Term Frequency-Inverse Document Frequency) calculation
 - Similarity-based search using cosine similarity
+- Hybrid search (combining TF-IDF + keyword matching)
 - Document clustering (K-means on TF-IDF vectors)
-- RAG (Retrieval-Augmented Generation) system
 - Supervised vs unsupervised learning in NLP
 
 **Part 3 (Consolidation):**
@@ -156,6 +168,11 @@ When using Google Colab (especially from GitHub), you need to upload the data fi
 - Building complete search systems with classes
 - Documentation and best practices
 - Consolidates Parts 1 & 2 by applying concepts with industry-standard tools
+
+**Bonus/Take-Home:**
+- RAG (Retrieval-Augmented Generation): Combining search with LLM generation
+- **Key insight**: RAG is fundamentally a search problem - retrieval is the most important part!
+- Using LLM as a judge to improve/rewrite results (advanced topic)
 
 **Key Concepts:**
 - **BoW/TF**: Simple word counting (foundation for TF-IDF)
@@ -190,11 +207,38 @@ When using Google Colab (especially from GitHub), you need to upload the data fi
 **Follows Learning Notebook Part 2**
 
 **Exercises included:**
-- **Exercise 3**: TF-IDF from Scratch (IDF calculation + full TF-IDF)
-- **Exercise 5**: Similarity-Based Search with TF-IDF
-- **Exercise 11**: RAG (Retrieval-Augmented Generation) with Movies
+- TF-IDF from Scratch (IDF calculation + full TF-IDF)
+- Build TF-IDF Vectors from Scratch
+- Similarity-Based Search with TF-IDF
+- Hybrid Search (combining TF-IDF + keyword matching)
+- Compare Search Methods (keyword vs TF-IDF vs hybrid)
 
 **Note**: Document clustering exercises are covered in **Learning Notebook Part 2** and not included in exercise notebooks.
+
+### RAG Exercise Notebook
+**Bonus/Take-Home Exercise** - Optional advanced exercise
+
+**What you'll build:**
+- Complete RAG (Retrieval-Augmented Generation) system for movie Q&A
+- Retrieval component using TF-IDF similarity search (the core search problem!)
+- Context construction and prompt engineering
+- LLM integration (mock, Cloudflare, Hugging Face, OpenAI options)
+- Complete RAG pipeline
+
+**Prerequisites**: 
+- Complete Exercise Notebook Part 2 (especially similarity search exercise)
+- Complete Exercise Notebook Part 3 (industry tools) - recommended
+
+**Key Insight**: RAG is fundamentally a **search problem**! The retrieval step (finding relevant documents) is the most important part - this is what you've been learning in Parts 1, 2, and 3. The LLM just formats the retrieved results into a natural answer.
+
+**Why a separate notebook?**
+- RAG is a complex topic that deserves dedicated space
+- Allows for more detailed explanations and examples
+- Multiple LLM integration options with step-by-step guidance
+- Easier to follow and understand the complete RAG pipeline
+- **Bonus content**: Using LLM as a judge to improve/rewrite results
+
+**Note**: This is a **bonus/take-home exercise**. The core learning is in Parts 1, 2, and 3 - RAG demonstrates how to apply search with LLMs!
 
 ### Exercise Notebook Part 3
 **Follows Learning Notebook Part 3** (Consolidation)

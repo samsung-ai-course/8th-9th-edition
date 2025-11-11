@@ -12,7 +12,9 @@ By the end of this class, you will be able to:
 - Implement keyword search (simple and TF-based)
 - Convert text to numbers using Bag of Words and TF-IDF
 - Start to understand sparse vs dense vector
-- Implement similarity-based search using TF-IDF
+- Implement similarity-based search using TF-IDF with multiple distance metrics (cosine similarity and Euclidean distance)
+- Compare distance metrics and understand when to use each
+- Use visualization exercises to build intuition about vector space and distance metrics
 - Cluster documents using machine learning (in order to visualize similarity)
 
 ---
@@ -20,7 +22,7 @@ By the end of this class, you will be able to:
 - Start to understand query rewriting, query fusion, and candidate selection
 - Get a glimpse into reranking strategies
 
-**Note:** Evaluation metrics (Precision, Recall, NDCG, MRR) will be covered in Class 3.
+**Note:** Evaluation metrics (Precision, Recall, NDCG, MRR, MAP) are introduced in Class 2 (Learning Notebook Part 2).
 
 ---
 
@@ -518,6 +520,60 @@ Results:
 
 ---
 
+## Distance Metrics: Cosine Similarity vs Euclidean Distance
+
+### Measuring Similarity: Two Approaches
+
+When comparing TF-IDF vectors, we can use different **distance metrics**. Think of these as different ways to measure "how similar" two documents are:
+
+### Cosine Similarity
+- **What it measures**: The **angle** between vectors (direction)
+- **Range**: -1 to 1 (for TF-IDF, usually 0 to 1)
+  - **1.0** = Identical direction (very similar)
+  - **0.0** = Perpendicular (unrelated)
+- **Best for**: Text similarity (ignores document length)
+- **Formula**: `cos(θ) = (A · B) / (||A|| × ||B||)`
+
+**Key insight**: Cosine similarity **ignores magnitude** - it only cares about the direction/pattern of words, not how many words there are.
+
+### Euclidean Distance
+- **What it measures**: The **straight-line distance** between vectors (magnitude)
+- **Range**: 0 to ∞
+  - **0** = Identical (same point in space)
+  - **Larger value** = More different
+- **Best for**: When magnitude/document length matters
+- **Formula**: `d = √Σ(A_i - B_i)²`
+
+**Key insight**: Euclidean distance **considers magnitude** - sensitive to both direction AND document length.
+
+### Visual Comparison:
+
+```
+Example Vectors:
+Doc A: [2, 4]  (longer document)
+Doc B: [1, 2]  (shorter document, same proportions)
+
+Cosine Similarity: 1.0 (same direction!)
+Euclidean Distance: √5 ≈ 2.24 (different lengths!)
+```
+
+### When to Use Which?
+
+| Use Case | Recommended Metric | Why? |
+|----------|-------------------|------|
+| **Text similarity (TF-IDF)** | **Cosine** ✅ | Ignores document length, focuses on word patterns |
+| **Document length matters** | Euclidean | Considers both pattern and magnitude |
+| **Normalized embeddings** | Either | Results often similar when vectors are normalized |
+| **Learning/comparison** | Both | Understanding differences builds intuition! |
+
+### Key Takeaway:
+
+**For TF-IDF text search, cosine similarity is more common** because it focuses on word patterns regardless of document length. A short tweet and a long article can be "similar" if they use similar word patterns!
+
+**In the notebooks**: You'll practice implementing **both metrics** and see how they give different results. This helps you understand when each is appropriate!
+
+---
+
 ## Clustering with TF-IDF
 
 ### Showcasing Similarities
@@ -550,6 +606,54 @@ Cluster 3: Comedy (funny, lighthearted)
 - Use PCA (Principal Component Analysis) to reduce to 2D
 - Plot clusters to see how documents group together
 - Check if clusters make semantic sense!
+
+---
+
+## Understanding Through Visualization
+
+### The Power of Visualization Exercises
+
+In the notebooks, you'll work with **visualization exercises** that help build intuition about vector space and distance metrics. These aren't just pretty pictures - they're learning tools!
+
+### What You'll Visualize:
+
+1. **Document Vectors in 2D Space**
+   - See how documents are positioned in vector space
+   - Closer points = more similar documents
+
+2. **Distance Metric Comparisons**
+   - Side-by-side plots showing cosine vs Euclidean results
+   - Understand why different metrics give different rankings
+
+3. **Custom Sentence Experiments**
+   - Create your own sentences and see where they land in space
+   - Test synonyms, different topics, varying lengths
+
+4. **Clustering Patterns**
+   - Watch similar documents naturally group together
+   - See how different topics form distinct clusters
+
+### Key Learning Goals:
+
+**From visualizations, you'll understand**:
+- How distance metrics "see" similarity differently (direction vs magnitude)
+- How preprocessing affects the vector space
+- Why similar documents cluster together naturally
+- The intuition behind vector search and similarity
+
+### Important Note: PCA
+
+> **📌 PCA (Principal Component Analysis)** is used **purely for visualization** - it projects high-dimensional TF-IDF vectors to 2D so we can see them. The details of how PCA works are **out of scope** for this class. You just need to know: it helps us visualize patterns in high-dimensional space.
+
+### Why This Matters:
+
+**Hands-on experimentation** with visualizations helps you:
+- Build intuition faster than formulas alone
+- See the "why" behind the "what"
+- Understand trade-offs between different approaches
+- Debug and improve your search systems
+
+**In the notebooks**: You'll create these visualizations yourself and experiment with different parameters to see what happens!
 
 ---
 
@@ -842,18 +946,18 @@ final_score = (
 
 ---
 
-## Evaluation Metrics - Coming in Class 3!
+## Evaluation Metrics - Covered in Learning Notebook Part 2!
 
-**Why metrics matter**: You need to **measure** if your search is improving! 
+**Why metrics matter**: You need to **measure** if your search is improving!
 
-We'll cover evaluation metrics in detail at the start of Class 3, including:
-- Precision@K and Recall@K
-- Mean Reciprocal Rank (MRR)
-- Normalized Discounted Cumulative Gain (NDCG)
-- Mean Average Precision (MAP)
-- Understanding the precision vs recall trade-off
+Evaluation metrics are covered in detail in **Learning Notebook Part 2**, including:
+- **Precision@K** and **Recall@K** - measuring relevance of top results
+- **Mean Reciprocal Rank (MRR)** - position of first relevant result
+- **Normalized Discounted Cumulative Gain (NDCG)** - ranking quality
+- **Mean Average Precision (MAP)** - average precision across all relevant results
+- Understanding the **precision vs recall trade-off**
 
-**For now**: Understand that measuring search quality is essential, and we'll learn how to do it properly in the next class!
+These metrics help you compare different search approaches (keyword, TF-IDF, hybrid) and tune parameters!
 
 ---
 
@@ -895,8 +999,8 @@ Sort by score → Top 10 results
 
 #### Evaluation
 ```python
-# We'll learn how to calculate these metrics in Class 3!
-# Precision@10, Recall@10, NDCG@10, MRR, etc.
+# Calculate metrics (covered in Learning Notebook Part 2!)
+# Precision@10, Recall@10, NDCG@10, MRR, MAP, etc.
 ```
 
 ---
@@ -931,7 +1035,7 @@ These are the **main takeaways** - understanding these concepts is what matters 
 - Need to measure to improve!
 - Different metrics for different goals
 - **Key idea**: You can't improve what you don't measure
-- **Coming next**: We'll learn specific metrics (Precision, Recall, NDCG, MRR) in Class 3!
+- **Covered in Learning Notebook Part 2**: Precision, Recall, NDCG, MRR, MAP!
 
 ### 6. Trade-offs Everywhere
 - Speed vs Accuracy
@@ -956,7 +1060,7 @@ These are the **main takeaways** - understanding these concepts is what matters 
 - 🔍 Advanced fusion strategies
 
 **Coming in Class 3:**
-- 📊 Evaluation metrics (Precision, Recall, MRR, NDCG, MAP)
+- 📊 Evaluation metrics (Precision, Recall, MRR, NDCG, MAP) - covered in Learning Notebook Part 2!
 - 📊 How to measure and improve search quality
 
 **Remember**: You now understand **how production systems work** at a high level. Implementation details come with practice and experience!
@@ -973,7 +1077,7 @@ These are the **main takeaways** - understanding these concepts is what matters 
 ✅ Query rewriting and fusion  
 ✅ Candidate selection strategies  
 ✅ Reranking approaches  
-✅ Understanding that evaluation metrics are important (details in Class 3!)  
+✅ Understanding evaluation metrics (Precision@K, Recall@K, MRR, NDCG, MAP) - covered in Learning Notebook Part 2!  
 
 ### Coming in Class 3:
 - ✅ **Embeddings**: Semantic representations (word2vec, sentence embeddings)
@@ -1036,7 +1140,7 @@ Same NLP preprocessing → Same vector representations → Different goals
 15. ✅ **Query enhancement**: Query rewriting (expansion, correction) and query fusion (multiple methods/variations)
 16. ✅ **Candidate selection**: Multi-method retrieval (keyword, TF-IDF, embeddings), hybrid approaches, ANN
 17. ✅ **Reranking**: Advanced similarity scoring, multi-factor ranking, learning-to-rank concepts
-18. ✅ **Evaluation metrics**: Precision@K, Recall@K, MRR, NDCG, MAP - understanding how to measure search quality
+18. ✅ **Evaluation metrics**: Precision@K, Recall@K, MRR, NDCG, MAP - understanding how to measure search quality (covered in Learning Notebook Part 2)
 
 ### The Big Picture
 
@@ -1078,17 +1182,13 @@ Same NLP preprocessing → Same vector representations → Different goals
 
 **Class 3: Understanding Embeddings**
 
-Today we learned the foundation. Next class starts with evaluation metrics, then we'll see how embeddings solve the limitations:
+Today we learned the foundation, including evaluation metrics. Next class we'll see how embeddings solve the limitations:
 
 ### Class 3 Overview:
-
-**First: Evaluation Metrics**
-- 📊 Learn how to measure search quality (Precision, Recall, MRR, NDCG, MAP)
-- 📊 Compare different search methods objectively
-- 📊 Understand the precision vs recall trade-off
-
-**Then: Embeddings**
-- ✅ **Semantic representations**: Dense vectors that understand synonyms and meaning
+- 🎯 **NLP preprocessing practice**: Apply what you learned to real messy data
+- 🧠 **Introduction to dense embeddings**: Word2Vec, GloVe, and semantic representations
+- 🔄 **From words to documents**: Creating document embeddings from word embeddings
+- 💼 **Practical use cases**: Supervised classification & unsupervised clustering
 - ✅ **True semantic search**: "NLP" and "natural language processing" are close in embedding space!
 - ✅ **Better understanding**: Captures relationships between words
 - ✅ **How they're learned**: Neural networks overview (deep details in later chapters)
@@ -1135,10 +1235,15 @@ Sparse: [0, 0, 1, 0, 0, ...] - mostly zeros, large vocabulary
 Dense: [0.23, -0.15, 0.87, ...] - all values, smaller dimension
 ```
 
-### Similarity:
+### Distance Metrics:
 ```
 Cosine Similarity = (A · B) / (||A|| × ||B||)
-Range: -1 to 1 (1 = identical)
+Range: -1 to 1 (1 = identical direction)
+Best for: Text similarity (ignores document length)
+
+Euclidean Distance = √Σ(A_i - B_i)²
+Range: 0 to ∞ (0 = identical)
+Best for: When magnitude matters
 ```
 
 ### Clustering:

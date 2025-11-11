@@ -161,6 +161,75 @@ Higher score = more similar. That's all you need!
 
 ---
 
+### Q: What's the difference between cosine similarity and Euclidean distance?
+**A**: Both measure similarity, but in different ways:
+
+**Cosine Similarity**:
+- Measures the **angle** between vectors (direction)
+- Score 1.0 = Same direction (very similar)
+- Score 0.0 = Perpendicular (unrelated)
+- **Ignores document length** - perfect for text!
+
+**Euclidean Distance**:
+- Measures the **straight-line distance** between vectors
+- Score 0.0 = Identical (same point in space)
+- Larger score = More different
+- **Considers magnitude** - sensitive to document length
+
+**Example**:
+```python
+Doc A: "python python machine learning" → [2, 1] (word counts)
+Doc B: "python machine"                  → [1, 1]
+
+Cosine: High similarity (same proportions/direction)
+Euclidean: Moderate distance (different magnitudes)
+```
+
+**For text**: Use **cosine** (most common) because document length shouldn't matter as much as word patterns.
+
+---
+
+### Q: When should I use cosine vs Euclidean distance?
+**A**:
+
+**Use Cosine (recommended for text)**:
+- When you want to ignore document length
+- Focus on word patterns and proportions
+- TF-IDF vectors
+- Most common for text similarity!
+
+**Use Euclidean**:
+- When magnitude/length matters
+- When working with normalized embeddings
+- To understand how metrics differ (learning purposes!)
+
+**Quick decision**: For this class and text similarity, **use cosine**. You'll practice both in the notebooks to see the differences!
+
+---
+
+### Q: Why do cosine and Euclidean give different results?
+**A**: They measure different things!
+
+**Cosine** = Direction (angle between vectors)
+- Documents with same word proportions but different lengths → High cosine similarity
+
+**Euclidean** = Distance (including magnitude)
+- Same documents → Different Euclidean distance (because of length difference)
+
+**Example**:
+```
+Query: "space adventure"
+Doc A: "space space space adventure adventure" (long, 5 words)
+Doc B: "space adventure" (short, 2 words)
+
+Cosine: Very similar (~1.0) - same proportions
+Euclidean: More different (~2.2) - different magnitudes
+```
+
+**The visualization exercises** in the notebooks help you see this difference visually!
+
+---
+
 ### Q: What's the difference between keyword and semantic search?
 **A**:
 
@@ -229,6 +298,66 @@ Higher score = more similar. That's all you need!
 3. **Need better representation**: TF-IDF might not be enough (try embeddings - Class 3!)
 
 **Tip**: Visualize clusters with PCA to see if they make sense.
+
+---
+
+## Visualization Exercises
+
+### Q: What am I supposed to learn from the visualization exercises?
+**A**: The visualization exercises help you build **intuition** about how vector space and distance metrics work!
+
+**What you'll understand from visualizations**:
+1. **Distance metrics work differently**:
+   - See side-by-side how cosine vs Euclidean rank documents
+   - Understand why similar documents can have different rankings
+
+2. **Vector space patterns**:
+   - Watch similar documents cluster together naturally
+   - See how different topics form separate groups
+   - Understand why "close in space" = "similar"
+
+3. **Preprocessing matters**:
+   - Compare results with/without preprocessing
+   - See how stop word removal affects clustering
+   - Understand why text cleaning helps
+
+4. **Hands-on experimentation**:
+   - Create custom sentences and see where they land
+   - Test with synonyms and see TF-IDF's limitations
+   - Play with parameters and observe results
+
+**Remember**: These aren't just pretty pictures - they're learning tools that build intuition faster than formulas alone!
+
+---
+
+### Q: What is PCA? Do I need to understand it?
+**A**: **No, you don't need to understand PCA details!**
+
+**What you need to know**:
+- **PCA = Principal Component Analysis**
+- **Purpose**: Reduces high-dimensional vectors to 2D for visualization
+- **It's a tool**, not a learning objective
+
+**In this class**:
+- PCA is used **purely for visualization** (so we can plot things)
+- The details of how PCA works are **out of scope**
+- Just know: it helps us see patterns in high-dimensional space
+
+**Think of it like this**: PCA is like a camera that takes a photo of high-dimensional space. You don't need to know how cameras work to look at a photo!
+
+---
+
+### Q: Why do my visualizations look different from the examples?
+**A**: That's expected! Visualizations can vary because of:
+
+1. **Random initialization**: PCA and K-Means use random starts
+2. **Different data**: Your custom sentences will create different patterns
+3. **Preprocessing choices**: Different cleaning = different vector space
+4. **Parameter settings**: max_features, stop words, etc. all affect results
+
+**This is good!** Experimenting and seeing different results helps you understand how these choices matter.
+
+**Tip**: Run the same cell multiple times and see if patterns are consistent (clusters in similar areas, metrics ranking similarly, etc.). If yes, the patterns are real!
 
 ---
 
@@ -346,9 +475,14 @@ from sklearn.cluster import KMeans
 kmeans = KMeans(n_clusters=3)
 clusters = kmeans.fit_predict(vectors)
 
-# Similarity
-from sklearn.metrics.pairwise import cosine_similarity
-similarity = cosine_similarity(vec1, vec2)
+# Distance Metrics
+from sklearn.metrics.pairwise import cosine_similarity, euclidean_distances
+
+# Cosine Similarity (most common for text)
+similarity = cosine_similarity(vec1, vec2)  # Higher = more similar
+
+# Euclidean Distance (for comparison)
+distance = euclidean_distances(vec1, vec2)  # Lower = more similar
 ```
 
 ---

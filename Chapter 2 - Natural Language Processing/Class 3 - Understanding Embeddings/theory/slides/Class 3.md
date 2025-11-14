@@ -1001,6 +1001,205 @@ dissimilar_pairs = [
 
 ---
 
+## Neural Networks: How Embeddings Are Learned
+
+### The Big Idea
+
+**You know embeddings are trained, but what does the training? Neural networks!**
+
+**Key point**: Neural networks are the tools that learn embeddings. They adjust vectors based on training objectives.
+
+### What Are Neural Networks?
+
+**Simple idea**: Think of a neural network like a student learning patterns:
+- Sees examples (words in context, sentences)
+- Notices patterns ("these words appear together often")
+- Creates embeddings to represent what it learned
+
+**What they are**:
+- Computational models inspired by how brains work
+- Made of interconnected "neurons" (simple processing units)
+- Learn by adjusting connections based on examples
+- For embeddings: They adjust vector values to capture patterns in text
+
+**Important**: You don't need to understand neural network details yet! This is just the big picture. You'll learn the details in deep learning chapters.
+
+### How Neural Networks Learn Embeddings
+
+**The process**:
+
+1. **Start with random vectors**
+   - Each word gets a random vector (like random guesses)
+   - These improve through training
+
+2. **Feed text to the network**
+   - Network sees millions of sentences
+   - For each sentence, tries to predict something (next word, masked word, similarity)
+
+3. **Make predictions**
+   - Network uses current vectors to predict
+   - Compares predictions to actual answers
+
+4. **Adjust vectors if wrong**
+   - If prediction is wrong, network adjusts vectors
+   - Moves vectors closer together or farther apart
+   - This is the learning part!
+
+5. **Repeat millions of times**
+   - Process repeats for entire training corpus
+   - Vectors gradually improve
+   - Eventually capture semantic relationships
+
+**Visual Analogy**:
+```
+Initial State (Random):
+"great"    [0.1, -0.3, 0.5, ...]  ← Random numbers
+"excellent" [0.4, 0.2, -0.1, ...]  ← Random numbers
+→ Distance: Far apart (random)
+
+After Training (Learned):
+"great"    [0.2, -0.1, 0.5, 0.3, ...]  ← Adjusted numbers
+"excellent" [0.25, -0.08, 0.48, 0.32, ...]  ← Adjusted numbers
+→ Distance: Close together (learned similarity!)
+```
+
+**Key idea**: **LEARN = Adjust the Vectors**
+- Learning means changing the numbers in embeddings
+- Neural networks do this automatically based on training objectives
+- Different objectives (next-token, MLM, contrastive) adjust vectors differently
+
+### Connection to Training Objectives
+
+**Remember the three training objectives? Neural networks execute them:**
+
+1. **Next Token Prediction (GPT-style)**
+   - Network sees: "The cat sat on"
+   - Predicts: "the" (next word)
+   - If wrong → adjusts vectors
+   - Result: Vectors learn language patterns
+
+2. **Masked Language Modeling (BERT-style)**
+   - Network sees: "The cat [MASK] on the mat"
+   - Predicts: "sat" (masked word)
+   - Uses bidirectional context (both left and right words)
+   - If wrong → adjusts vectors
+   - Result: Vectors learn contextual meaning
+
+3. **Contrastive Learning (Sentence-BERT-style)**
+   - Network sees: Similar sentence pairs, dissimilar pairs
+   - Learns: Push similar sentences closer, dissimilar farther
+   - Adjusts vectors for better sentence representations
+   - Result: Vectors optimized for sentence similarity
+
+**Pattern**: All three use neural networks to adjust vectors, but with different goals!
+
+### Why Neural Networks Work for Embeddings
+
+**What makes them powerful**:
+
+1. **Pattern recognition**
+   - Networks excel at finding patterns in data
+   - Text has patterns: words in similar contexts have similar meanings
+   - Networks learn these patterns automatically
+
+2. **Automatic learning**
+   - No human needs to define rules
+   - Network discovers relationships from data
+   - Learns complex patterns humans might miss
+
+3. **Scalability**
+   - Can process millions/billions of examples
+   - Learns from massive text corpora
+   - Gets better with more data
+
+4. **Flexibility**
+   - Same architecture can learn different objectives
+   - Can adapt to different tasks (word-level, sentence-level)
+   - Can be fine-tuned for specific domains
+
+### Different Models, Different Architectures
+
+**Word2Vec/GloVe**:
+- Simpler neural network architectures
+- Focus on word-level patterns
+- Fast training, good for common words
+- Architecture: Feedforward networks (you'll learn details later!)
+
+**BERT/GPT**:
+- More complex architectures (Transformers)
+- Better at understanding context and sequences
+- Can handle longer text, better sentence understanding
+- Architecture: Transformer networks (advanced topic for later!)
+
+**Sentence-BERT**:
+- Built on top of BERT (uses Transformer architecture)
+- Fine-tuned with contrastive learning
+- Optimized for sentence similarity
+- Architecture: Transformer + contrastive training
+
+**Key point**: More complex architectures (like Transformers) learn better representations, but they're also more expensive. You'll learn about these in deep learning chapters!
+
+### The Big Picture: From Text to Meaning
+
+**The journey**:
+
+```
+Raw Text
+    ↓
+Neural Network (sees patterns)
+    ↓
+Training Objective (what to predict)
+    ↓
+Vector Adjustments (learning)
+    ↓
+Embeddings (learned representations)
+    ↓
+Semantic Understanding (meaning captured!)
+```
+
+**What you need to know now**:
+- ✅ Neural networks learn embeddings
+- ✅ They adjust vectors based on training objectives
+- ✅ Different objectives create different types of embeddings
+- ✅ More complex networks learn better representations
+- ❌ You don't need architecture details yet!
+
+**What you'll learn later** (Deep Learning Chapters):
+- How neural networks work (neurons, layers, activation functions)
+- Different architectures (feedforward, recurrent, transformer)
+- How training happens (backpropagation, optimization)
+- How to build and train your own networks
+
+### Practical Implications
+
+**For using embeddings**:
+- You don't need to understand neural networks to use embeddings!
+- Pre-trained embeddings already learned from neural networks
+- Just load and use them (like we've been doing)
+
+**For understanding embeddings**:
+- Knowing neural networks learn them helps explain:
+  - Why embeddings capture meaning (learned from patterns)
+  - Why different models give different results (different architectures/objectives)
+  - Why training on more data helps (more patterns to learn)
+
+**For future learning**:
+- Understanding embeddings prepares you for neural networks
+- You've seen what neural networks can do (create semantic representations)
+- You'll learn how they do it (architecture, training) in deep learning chapters
+
+### Key Takeaways
+
+1. **Neural networks are the learning machines** that create embeddings
+2. **They adjust vectors** based on training objectives (next-token, MLM, contrastive)
+3. **Different architectures** (simple → complex) learn different quality embeddings
+4. **You don't need details yet** - just understand the big picture!
+5. **Pre-trained embeddings** already did the neural network training for you
+
+**Remember**: This is an introduction! You'll dive deep into neural networks in later chapters. For now, just understand that they're the tools that learn embeddings from text.
+
+---
+
 ## Pre-trained Embeddings: Standing on Giants' Shoulders
 
 ### Why Pre-trained?

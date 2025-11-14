@@ -27,6 +27,21 @@
 
 **Use embeddings when**: You need semantic understanding, not just word matching.
 
+**Code example:**
+```python
+# TF-IDF: Different words = 0 similarity
+from sklearn.feature_extraction.text import TfidfVectorizer
+tfidf = TfidfVectorizer()
+docs = ["NLP is great", "natural language processing is amazing"]
+vectors = tfidf.fit_transform(docs)
+similarity = cosine_similarity(vectors[0], vectors[1])  # ≈ 0 (no shared words!)
+
+# Embeddings: Understand synonyms
+import gensim.downloader as api
+model = api.load('word2vec-google-news-300')
+similarity = model.similarity('NLP', 'natural_language_processing')  # High similarity!
+```
+
 ---
 
 ### Q: What does "300 dimensions" mean? I can't visualize that.
@@ -60,9 +75,17 @@
 
 **Visualize similarities**:
 ```python
-# These have high similarity (close in embedding space)
-"python" ↔ "java" (both programming languages)
-"king" ↔ "queen" (both royalty)
+import gensim.downloader as api
+model = api.load('word2vec-google-news-300')
+
+# Get embedding (300 numbers)
+vec = model['python']
+print(f"Shape: {vec.shape}")  # (300,)
+print(f"First 5 values: {vec[:5]}")  # [0.123, -0.456, 0.789, ...]
+
+# Find similar words
+similar = model.most_similar('python', topn=3)
+# [('java', 0.72), ('javascript', 0.68), ('programming', 0.63)]
 ```
 
 **Use 2D projections** (PCA/t-SNE) to see relationships visually.
@@ -88,6 +111,21 @@
 
 **Key point**: FastText handles OOV better, but all three work well for common words. Choose based on your needs!
 
+**Code comparison - finding similar words:**
+```python
+import gensim.downloader as api
+
+# All have similar interface for common operations
+word2vec = api.load('word2vec-google-news-300')
+glove = api.load('glove-wiki-gigaword-300')
+fasttext = api.load('fasttext-wiki-news-subwords-300')
+
+# Finding similar words: All work the same way
+word2vec.most_similar('python', topn=3)  # [('java', 0.72), ...]
+glove.most_similar('python', topn=3)     # [('java', 0.68), ...]
+fasttext.most_similar('python', topn=3)  # [('java', 0.65), ...]
+```
+
 ---
 
 ### Q: What does "king - man + woman ≈ queen" mean?
@@ -99,6 +137,20 @@
 **It's like**: Royalty relationship + gender swap = new word
 
 **Don't worry if it's confusing!** It's a cool property, but understanding it perfectly isn't required.
+
+**Code example:**
+```python
+import gensim.downloader as api
+model = api.load('word2vec-google-news-300')
+
+# Vector arithmetic
+result = model.most_similar(
+    positive=['woman', 'king'],
+    negative=['man'],
+    topn=1
+)
+# Returns: [('queen', 0.71)] - the relationship is preserved!
+```
 
 ---
 
@@ -127,17 +179,30 @@
 
 **1. Simple averaging** (what you learned in Part 1):
 ```python
-sentence = "I love machine learning"
-words = ["I", "love", "machine", "learning"]
-word_embeddings = [emb_i, emb_love, emb_machine, emb_learning]
+import numpy as np
+import gensim.downloader as api
 
-sentence_embedding = average(word_embeddings)
+model = api.load('word2vec-google-news-300')
+sentence = "I love machine learning"
+words = sentence.lower().split()
+
+# Get word embeddings
+word_vectors = [model[w] for w in words if w in model]
+
+# Average them
+sentence_embedding = np.mean(word_vectors, axis=0)
+print(f"Sentence embedding shape: {sentence_embedding.shape}")  # (300,)
 ```
 
 **2. Sentence-BERT** (what you learned in Part 2):
-- Trained specifically for sentences
-- Uses contrastive learning
-- Captures word order and context better
+```python
+from sentence_transformers import SentenceTransformer
+
+model = SentenceTransformer('all-MiniLM-L6-v2')
+sentence = "I love machine learning"
+sentence_embedding = model.encode(sentence)
+print(f"Sentence embedding shape: {sentence_embedding.shape}")  # (384,)
+```
 
 **When to use**: Start with averaging (simple, fast). Use Sentence-BERT for better quality (slower but better).
 
@@ -229,6 +294,8 @@ sentence_embedding = average(word_embeddings)
 
 **For now**: FastText handles OOV best. Word2Vec/GloVe work fine for common words.
 
+**See Troubleshooting section below** for code example on handling OOV words.
+
 ---
 
 ## Using Embeddings
@@ -257,6 +324,27 @@ sentence_embedding = average(word_embeddings)
 
 **Visual check**: Embeddings should group semantically similar items together.
 
+**Code example - comparing synonyms:**
+```python
+import gensim.downloader as api
+from sklearn.metrics.pairwise import cosine_similarity
+
+model = api.load('word2vec-google-news-300')
+
+# Test synonym understanding
+words = ["great", "excellent", "amazing", "terrible"]
+similarities = []
+for w1 in words:
+    for w2 in words:
+        if w1 != w2:
+            sim = model.similarity(w1, w2)
+            similarities.append((w1, w2, sim))
+
+# Positive words should be similar, negative words different
+# "great" ↔ "excellent": ~0.75 (high!)
+# "great" ↔ "terrible": ~0.1 (low!)
+```
+
 ---
 
 ### Q: Should I always use embeddings?
@@ -281,6 +369,28 @@ sentence_embedding = average(word_embeddings)
 **What you see**: Similar words cluster together in 2D projection.
 
 **Note**: 2D is just for visualization. Actual embeddings are still 300D.
+
+**Code example:**
+```python
+import gensim.downloader as api
+from sklearn.manifold import TSNE
+import matplotlib.pyplot as plt
+
+model = api.load('word2vec-google-news-300')
+words = ['python', 'java', 'javascript', 'great', 'excellent', 'amazing']
+vectors = [model[w] for w in words]
+
+# Reduce to 2D
+tsne = TSNE(n_components=2, random_state=42)
+vectors_2d = tsne.fit_transform(vectors)
+
+# Plot
+plt.scatter(vectors_2d[:, 0], vectors_2d[:, 1])
+for i, word in enumerate(words):
+    plt.annotate(word, (vectors_2d[i, 0], vectors_2d[i, 1]))
+plt.show()
+# Programming languages cluster together, positive words cluster together!
+```
 
 ---
 
@@ -439,6 +549,28 @@ accuracy = accuracy_score(y_test, y_pred)
 - **Sentence-BERT**: Better accuracy needed, production systems
 
 **In Part 2**: You'll see Sentence-BERT usually outperforms averaging!
+
+**Code comparison - embedding shapes:**
+```python
+import numpy as np
+import gensim.downloader as api
+from sentence_transformers import SentenceTransformer
+
+word_model = api.load('word2vec-google-news-300')
+sbert = SentenceTransformer('all-MiniLM-L6-v2')
+
+text = "I love this movie"
+
+# Word averaging: 300 dimensions (from Word2Vec)
+words = text.lower().split()
+word_vecs = [word_model[w] for w in words if w in word_model]
+avg_vec = np.mean(word_vecs, axis=0)  # Shape: (300,)
+
+# Sentence-BERT: 384 dimensions (optimized for sentences)
+sbert_vec = sbert.encode(text)  # Shape: (384,)
+
+# Sentence-BERT usually gives better classification results!
+```
 
 ---
 

@@ -88,3 +88,10 @@
 [**Learning Notebook Part 1** - Word Embeddings & Visualization   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%202%20-%20Natural%20Language%20Processing/Class%203%20-%20Understanding%20Embeddings/notebooks/Learning%20Notebook%20Part%201.ipynb)
 
 [**Learning Notebook Part 2** - Sentence Embeddings & Classification   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%202%20-%20Natural%20Language%20Processing/Class%203%20-%20Understanding%20Embeddings/notebooks/Learning%20Notebook%20Part%202.ipynb)
+
+## Chapter 3: Supervised learning
+
+### Regression
+[**Slides**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%202%20-%20Natural%20Language%20Processing/Class%201%20%26%202%20-%20NLP%20and%20Search/notebooks/Exercise%20Notebook%20Part%201.ipynb)
+
+[**Exercise Notebook **   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%202%20-%20Natural%20Language%20Processing/Class%201%20%26%202%20-%20NLP%20and%20Search/notebooks/Exercise%20Notebook%20Part%201.ipynb)

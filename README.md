@@ -91,7 +91,7 @@
 
 ## Chapter 3: Supervised learning
 
-### Regression
-[**Slides**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%202%20-%20Natural%20Language%20Processing/Class%201%20%26%202%20-%20NLP%20and%20Search/notebooks/Exercise%20Notebook%20Part%201.ipynb)
+### Class 1 - Regression
+[**Slides**](https://github.com/samsung-ai-course/8th-9th-edition/blob/main/Chapter%203%20-%20Supervised%20Learning/Class%201%20-%20Linear%20Regression%20/Slides/8th%269t%20Supervised%20Learning%20%20basics.pdf)
 
-[**Exercise Notebook **   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%202%20-%20Natural%20Language%20Processing/Class%201%20%26%202%20-%20NLP%20and%20Search/notebooks/Exercise%20Notebook%20Part%201.ipynb)
+[**Exercise Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%203%20-%20Supervised%20Learning/Class%201%20-%20Linear%20Regression%20/Exercises/regression.ipynb)

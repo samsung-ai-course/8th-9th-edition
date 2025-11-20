@@ -97,7 +97,7 @@
 [**Exercise Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%203%20-%20Supervised%20Learning/Class%201%20-%20Linear%20Regression%20/Exercises/regression.ipynb)
 
 
-### Class 2 - Regression
+### Class 2 - Classification Logistic Regression, KNN, SVM
 
 
 [**Exercise Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%203%20-%20Supervised%20Learning/Class%202%20-%20Classification/Titanic_Classification_Exercise.ipynb)

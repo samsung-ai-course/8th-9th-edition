@@ -101,3 +101,9 @@
 
 
 [**Exercise Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%203%20-%20Supervised%20Learning/Class%202%20-%20Classification/Titanic_Classification_Exercise.ipynb)
+
+
+
+### Class 3 - Classification Logistic Regression, KNN, SVM
+
+

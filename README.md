@@ -108,3 +108,10 @@
 
 
 [**Exercise Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%203%20-%20Supervised%20Learning/Class%203%20-%20Decision%20trees%20%26%20Ensemble%20Algorithms/Exercise_notebook.ipynb)
+
+
+
+### Class 4 - Practice
+
+
+[**Exercise Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%203%20-%20Supervised%20Learning/Class%204%20-%20Practice%20and%20methodologies/Multi_Model_Hyperparameter_Tuning_Hotel_Reservations.ipynb)

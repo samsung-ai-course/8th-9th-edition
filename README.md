@@ -115,3 +115,20 @@
 
 
 [**Exercise Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%203%20-%20Supervised%20Learning/Class%204%20-%20Practice%20and%20methodologies/Multi_Model_Hyperparameter_Tuning_Hotel_Reservations.ipynb)
+
+
+
+
+## Chapter 3: Unsupervised learning
+
+### Class 1 - Clustering
+[**1.1 K-means intro**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%204%20-%20Unsupervised%20Learning/clustering/1.1%20K-means-Intro.ipynb)
+
+[**1.1 K-means intro**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%204%20-%20Unsupervised%20Learning/clustering/1.1%20K-means-Intro.ipynb)
+
+[**1.2 K-means Iris dataset**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%204%20-%20Unsupervised%20Learning/clustering/1.2%20K-means-real-data.ipynb)
+
+[**1.3 K-means Agglomerative & DBSCAN**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%204%20-%20Unsupervised%20Learning/clustering/1.3%20dbscan-kmeans.ipynb)
+
+[**1.4 Unsupervised clustering challenging**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%204%20-%20Unsupervised%20Learning/clustering/1.4%20exercise_notebook.ipynb)
+

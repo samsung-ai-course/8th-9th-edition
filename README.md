@@ -132,3 +132,10 @@
 
 [**1.4 Unsupervised clustering challenging**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%204%20-%20Unsupervised%20Learning/clustering/1.4%20exercise_notebook.ipynb)
 
+
+### Class 2 - Dimensionality reduction
+
+
+[** PCA intro **   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%204%20-%20Unsupervised%20Learning/Dimensionality%20reduction/PCA.ipynb)
+
+[** Exercise **   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%204%20-%20Unsupervised%20Learning/Dimensionality%20reduction/Exercise_notebook.ipynb)

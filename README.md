@@ -139,3 +139,13 @@
 [** PCA intro **   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%204%20-%20Unsupervised%20Learning/Dimensionality%20reduction/PCA.ipynb)
 
 [** Exercise **   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%204%20-%20Unsupervised%20Learning/Dimensionality%20reduction/Exercise_notebook.ipynb)
+
+## Chapter 5: Responsible AI
+
+[**Bias & Fairness**](https://github.com/samsung-ai-course/8th-9th-edition/blob/main/Chapter%205%20-%20Responsible%20AI/Bias%20%26%20Fairness.pptx)
+
+[**Learning Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%205%20-%20Responsible%20AI/Learning%20Notebook.ipynb)
+
+[**Exercise Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%205%20-%20Responsible%20AI/Exercise%20Notebook.ipynb)
+
+[**AUC ROC vs AvgPrec**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%205%20-%20Responsible%20AI/AUC%20ROC%20vs%20AvgPrec.ipynb)

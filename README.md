@@ -119,7 +119,7 @@
 
 
 
-## Chapter 3: Unsupervised learning
+## Chapter 4: Unsupervised learning
 
 ### Class 1 - Clustering
 [**1.1 K-means intro**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%204%20-%20Unsupervised%20Learning/clustering/1.1%20K-means-Intro.ipynb)

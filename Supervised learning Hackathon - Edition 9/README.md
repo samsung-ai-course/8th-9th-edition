@@ -62,19 +62,7 @@ The dataset contains 45,000 records and 14 variables, each described below:
 
 ### Step 1: Load and Explore the Data
 
-Start by loading `history.csv` and exploring the dataset:
-
-```python
-import pandas as pd
-
-# Load training data
-history = pd.read_csv('data/history.csv')
-
-# Explore the data
-print(history.head())
-print(history.info())
-print(history['loan_status'].value_counts())
-```
+Start by loading `history.csv` and exploring the dataset.
 
 ### Step 2: Build Your Machine Learning Model
 
@@ -86,27 +74,7 @@ print(history['loan_status'].value_counts())
 
 ### Step 3: Make Predictions on Test Set
 
-Load `test.csv` and generate predictions:
-
-```python
-# Load test data
-test = pd.read_csv('data/test.csv')
-
-# Apply the same preprocessing as training data
-# ... your preprocessing code ...
-
-# Make predictions
-predictions = model.predict(test)
-
-# Create submission file
-submission = pd.DataFrame({
-    'id': test['id'],
-    'pred': predictions
-})
-
-# Save submission file
-submission.to_csv('data/my_submission.csv', index=False)
-```
+Load `test.csv` and generate predictions.
 
 ### Step 4: Bias Analysis and Decision Threshold Optimization
 

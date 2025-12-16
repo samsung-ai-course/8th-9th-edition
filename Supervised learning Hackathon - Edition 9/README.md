@@ -1,5 +1,7 @@
 # Supervised Learning Hackathon - Edition 9
 
+[**Hackathon Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Supervised%20learning%20Hackathon%20-%20Edition%209/notebook.ipynb)
+
 ## Overview
 
 Welcome to the Supervised Learning Hackathon! In this challenge, you will build a machine learning model to predict loan approval status based on various applicant features. Your goal is to create the most accurate model possible using the training data provided.

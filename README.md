@@ -116,9 +116,6 @@
 
 [**Exercise Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%203%20-%20Supervised%20Learning/Class%204%20-%20Practice%20and%20methodologies/Multi_Model_Hyperparameter_Tuning_Hotel_Reservations.ipynb)
 
-
-
-
 ## Chapter 4: Unsupervised learning
 
 ### Class 1 - Clustering
@@ -149,3 +146,9 @@
 [**Exercise Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%205%20-%20Responsible%20AI/Exercise%20Notebook.ipynb)
 
 [**AUC ROC vs AvgPrec**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%205%20-%20Responsible%20AI/AUC%20ROC%20vs%20AvgPrec.ipynb)
+
+### Supervised Learning Hackathon - Edition 9
+
+[**Hackathon Page**](https://github.com/samsung-ai-course/8th-9th-edition/tree/main/Supervised%20learning%20Hackathon%20-%20Edition%209)
+
+[**Hackathon Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Supervised%20learning%20Hackathon%20-%20Edition%209/notebook.ipynb)

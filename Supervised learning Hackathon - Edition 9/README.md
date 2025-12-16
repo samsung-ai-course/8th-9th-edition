@@ -70,7 +70,7 @@ Start by loading `history.csv` and exploring the dataset.
 
 1. **Preprocess the data**: Handle missing values, encode categorical variables, scale features if needed
 2. **Split your training data**: Create a test set to test your final model's generalization performance. And also a validation set or cross validation with the remaining data.
-3. **Train your model**: Use any machine learning algorithm (Logistic Regression, Random Forest, XGBoost, Neural Networks, etc.)
+3. **Train your model**: Use any machine learning algorithm (Logistic Regression, Random Forest, etc.)
 4. **Evaluate performance**: Use metrics like accuracy, precision, recall, F1-score, or AUC-ROC
 5. **Tune hyperparameters**: Optimize your model for best performance
 

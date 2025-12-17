@@ -147,6 +147,12 @@
 
 [**AUC ROC vs AvgPrec**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%205%20-%20Responsible%20AI/AUC%20ROC%20vs%20AvgPrec.ipynb)
 
+### Supervised Learning Hackathon - Edition 8
+
+[**Hackathon Page**](https://github.com/samsung-ai-course/8th-9th-edition/tree/main/Supervised%20learning%20Hackathon%20-%20Edition%208)
+
+[**Hackathon Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Supervised%20learning%20Hackathon%20-%20Edition%208/notebook.ipynb)
+
 ### Supervised Learning Hackathon - Edition 9
 
 [**Hackathon Page**](https://github.com/samsung-ai-course/8th-9th-edition/tree/main/Supervised%20learning%20Hackathon%20-%20Edition%209)

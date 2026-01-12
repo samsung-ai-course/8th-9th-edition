@@ -44,3 +44,6 @@ yarn-error.log*
 *.swp
 *.swo
 *~
+
+# Chapter 7 - Dataset files
+Chapter 7 - Deep Learning Development Fundamentals/data/

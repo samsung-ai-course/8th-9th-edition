@@ -174,3 +174,13 @@
 [**Exercise 1**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%206%20-%20Intro%20to%20Deep%20Learning/Building%20Neural%20Networks%20from%20Scratch/Exercise%201%20-%20Implement%20remaining%20operators.ipynb)
 
 [**Exercise 2**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%206%20-%20Intro%20to%20Deep%20Learning/Building%20Neural%20Networks%20from%20Scratch/Exercise%202%20-%20Implement%20remaining%20backward.ipynb)
+
+## Chapter 7: Deep Learning Development Fundamentals
+
+[**01 - PyTorch Basics and First Neural Network**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%207%20-%20Deep%20Learning%20Development%20Fundamentals/01_PyTorch_Basics_and_First_Neural_Network.ipynb)
+
+[**02 - Wide vs Deep Neural Networks**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%207%20-%20Deep%20Learning%20Development%20Fundamentals/02_Wide_vs_Deep_Neural_Networks.ipynb)
+
+[**03 - Multiclass Classification & Softmax**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%207%20-%20Deep%20Learning%20Development%20Fundamentals/03_multiclass_classification_softmax.ipynb)
+
+[**04 - MNIST Dataset**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%207%20-%20Deep%20Learning%20Development%20Fundamentals/04_MNIST-Dataset.ipynb)

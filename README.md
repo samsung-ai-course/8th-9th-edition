@@ -184,3 +184,13 @@
 [**03 - Multiclass Classification & Softmax**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%207%20-%20Deep%20Learning%20Development%20Fundamentals/03_multiclass_classification_softmax.ipynb)
 
 [**04 - MNIST Dataset**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%207%20-%20Deep%20Learning%20Development%20Fundamentals/04_MNIST-Dataset.ipynb)
+
+## Chapter 8: Self Supervised Learning
+
+### Auto Encoders and VAEs
+
+[**Auto-Encoders Slides**](https://github.com/samsung-ai-course/8th-9th-edition/blob/main/Chapter%208%20-%20Self%20Supervised%20Learning/Auto%20Encoders%20and%20VAEs/Auto-Encoders.pptx)
+
+[**Learning Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%208%20-%20Self%20Supervised%20Learning/Auto%20Encoders%20and%20VAEs/Learning%20Notebook.ipynb)
+
+[**Practical Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%208%20-%20Self%20Supervised%20Learning/Auto%20Encoders%20and%20VAEs/Practical%20Notebook.ipynb)

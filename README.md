@@ -183,7 +183,9 @@
 
 [**03 - Multiclass Classification & Softmax**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%207%20-%20Deep%20Learning%20Development%20Fundamentals/03_multiclass_classification_softmax.ipynb)
 
-[**04 - MNIST Dataset**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%207%20-%20Deep%20Learning%20Development%20Fundamentals/04_MNIST-Dataset.ipynb)
+[**04 - Gradient Descent Training Dynamics**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%207%20-%20Deep%20Learning%20Development%20Fundamentals/04_Gradient_Descent_Training_Dynamics.ipynb)
+
+[**05 - MNIST Dataset**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%207%20-%20Deep%20Learning%20Development%20Fundamentals/05_MNIST-Dataset.ipynb)
 
 ## Chapter 8: Self Supervised Learning
 

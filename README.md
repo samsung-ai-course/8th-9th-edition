@@ -196,3 +196,11 @@
 [**Learning Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%208%20-%20Self%20Supervised%20Learning/Auto%20Encoders%20and%20VAEs/Learning%20Notebook.ipynb)
 
 [**Practical Notebook**   ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%208%20-%20Self%20Supervised%20Learning/Auto%20Encoders%20and%20VAEs/Practical%20Notebook.ipynb)
+
+## Chapter 9: Deep Learning
+
+### Convolutional Neural Networks
+
+[**Exercises**  
+![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
+https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%209%20-%20Deep%20Learning/CNNs/cnn_classes.ipynb)

@@ -201,6 +201,5 @@
 
 ### Convolutional Neural Networks
 
-[**Exercises**  
-![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
+[**Exercises**  ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](
 https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%209%20-%20Deep%20Learning/CNNs/cnn_classes.ipynb)

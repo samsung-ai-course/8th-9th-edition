@@ -206,3 +206,8 @@ https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/
 
 ### Transformer Part I: The Encoder  
 [**Exercises** ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%209%20-%20Deep%20Learning/Transformer_Encoder/Encoder_BERT_exercises.ipynb)
+
+### Vision and Language Encoder Models  
+[**Exercises** ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/samsung-ai-course/8th-9th-edition/blob/main/Chapter%209%20-%20Deep%20Learning/VL_Encoders/V%26L_Encoders_with_exercises.ipynb)
+
+
